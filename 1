@@ -1,0 +1,274 @@
+-- 𝓓𝓮𝓬𝓸𝓶𝓹𝓲𝓵𝓮𝓭 𝓫𝔂 𝓯𝓻𝓮𝓪𝓴𝔂 𝓭𝓮𝓬𝓸𝓶𝓹𝓲𝓵𝓮𝓻
+-- USED GLOBALS: script.
+[003] :001:GETIMPORT      v1 = script
+[005] :001:GETTABLEKS     v0 = v1.Parent
+[006] :002:LOADK          v3 = "Humanoid"
+[009] :002:CALL           v1 = v1:WaitForChild(v3)
+[010] :003:LOADK          v4 = "HumanoidRootPart"
+[013] :003:CALL           v2 = v2:WaitForChild(v4)
+[015] :005:GETIMPORT      v3 = game
+[016] :005:LOADK          v5 = "Players"
+[019] :005:CALL           v3 = v3:GetService(v5)
+[021] :006:GETIMPORT      v4 = game
+[022] :006:LOADK          v6 = "RunService"
+[025] :006:CALL           v4 = v4:GetService(v6)
+[027] :007:GETIMPORT      v5 = game
+[028] :007:LOADK          v7 = "UserInputService"
+[031] :007:CALL           v5 = v5:GetService(v7)
+[033] :009:GETIMPORT      v9 = workspace
+[035] :009:GETTABLEKS     v6 = v9.CurrentCamera
+[037] :009:GETIMPORT      v9 = time
+[038] :009:CALL           v9 = v9()
+[039] :009:MOVE           v7 = v9
+[040] :009:LOADB          v8 = false
+[041] :010:MOVE           v11 = v0
+[044] :010:CALL           v9 = v9:GetPlayerFromCharacter(v11)
+[045] :012:LOADN          v10 = 70
+[047] :012:SETTABLEKS     v6.FieldOfView = v10
+[048] :015:LOADK          v12 = "Jump"
+[051] :015:CALL           v10 = v10:GetPropertyChangedSignal(v12)
+[052] :015:DUPCLOSURE     v12 = function()
+-- proto pool id: 0
+-- num upvalues: 2
+-- num inner protos: 0
+-- size instructions: 12
+-- size constants: 3
+-- lineinfo gap: 24
+-- max stack size: 3
+-- is typed: true
+[001] :016:GETUPVAL       v0 = u_v9
+[002] :016:LOADK          v2 = "Flying"
+[005] :016:CALL           v0 = v0:GetAttribute(v2)
+[007] :016:JUMPXEQKB      if v0 == true then -- goto #12
+[008] :017:GETUPVAL       v0 = u_v1
+[009] :017:LOADB          v1 = false
+[011] :017:SETTABLEKS     v0.Jump = v1
+end
+[012] :019:RETURN         return
+end
+[057] :015:CALL           v10:Connect(v12)
+[058] :022:LOADK          v12 = "Flying"
+[061] :022:CALL           v10 = v10:GetAttributeChangedSignal(v12)
+[062] :022:NEWCLOSURE     v12 = function()
+-- proto pool id: 1
+-- num upvalues: 4
+-- num inner protos: 0
+-- size instructions: 25
+-- size constants: 10
+-- lineinfo gap: 24
+-- max stack size: 3
+-- is typed: true
+[001] :023:GETUPVAL       v0 = u_v9
+[002] :023:LOADK          v2 = "Flying"
+[005] :023:CALL           v0 = v0:GetAttribute(v2)
+[007] :023:JUMPXEQKB      if v0 == false then -- goto #25
+[008] :024:LOADB          v0 = false
+[009] :024:SETUPVAL       u_v8 = v0
+[010] :024:GETUPVAL       v0 = u_v1
+[011] :024:LOADB          v1 = false
+[013] :024:SETTABLEKS     v0.PlatformStand = v1
+[014] :024:GETUPVAL       v1 = u_v2
+[016] :024:GETTABLEKS     v0 = v1.Running
+[017] :024:LOADK          v1 = 0.65
+[019] :024:SETTABLEKS     v0.Volume = v1
+[021] :024:GETIMPORT      v0 = workspace
+[022] :024:LOADK          v1 = 196.2
+[024] :024:SETTABLEKS     v0.Gravity = v1
+end
+[025] :026:RETURN         return
+end
+[069] :022:CALL           v10:Connect(v12)
+[071] :029:GETTABLEKS     v10 = v5.JumpRequest
+[072] :029:NEWCLOSURE     v12 = function()
+-- proto pool id: 2[072] :029:NEWCLOSURE     v12 = function()
+-- proto pool id: 2
+-- num upvalues: 5
+-- num inner protos: 0
+-- size instructions: 69
+-- size constants: 19
+-- lineinfo gap: 24
+-- max stack size: 7
+-- is typed: true
+[001] :030:GETUPVAL       v0 = u_v9
+[002] :030:LOADK          v2 = "Flying"
+[005] :030:CALL           v0 = v0:GetAttribute(v2)
+[007] :030:JUMPXEQKB      if v0 == true then -- goto #69
+[009] :030:GETIMPORT      v1 = time
+[010] :030:CALL           v1 = v1()
+[011] :030:GETUPVAL       v2 = u_v7
+[012] :030:SUB            v0 = v1 - v2
+[013] :030:LOADK          v1 = 0.5
+[015] :030:JUMPIFNOTLT    if v1 < v0 then -- goto #69
+[016] :031:GETUPVAL       v0 = u_v8
+[018] :031:JUMPXEQKB      if v0 == false then -- goto #48
+[019] :032:LOADB          v0 = true
+[020] :032:SETUPVAL       u_v8 = v0
+[021] :032:GETUPVAL       v0 = u_v1
+[022] :032:LOADB          v1 = true
+[024] :032:SETTABLEKS     v0.PlatformStand = v1
+[025] :032:GETUPVAL       v1 = u_v2
+[027] :032:GETTABLEKS     v0 = v1.Running
+[028] :032:LOADN          v1 = 0
+[030] :032:SETTABLEKS     v0.Volume = v1
+[031] :033:GETUPVAL       v0 = u_v2
+[033] :033:GETTABLEKS     v1 = v0.AssemblyLinearVelocity
+[034] :033:LOADN          v3 = 0
+[035] :033:GETUPVAL       v6 = u_v1
+[037] :033:GETTABLEKS     v5 = v6.JumpHeight
+[038] :033:MULK           v4 = v5 * 2.5
+[039] :033:LOADN          v5 = 0
+[042] :033:GETIMPORT      v2 = Vector3.new
+[043] :033:CALL           v2 = v2(v3, v4, v5)
+[044] :033:ADD            v1 = v1 + v2
+[046] :033:SETTABLEKS     v0.AssemblyLinearVelocity = v1
+[047] :033:JUMP           -- jump to #64
+end
+[048] :035:LOADB          v0 = false
+[049] :035:SETUPVAL       u_v8 = v0
+[050] :035:GETUPVAL       v0 = u_v1
+[051] :035:LOADB          v1 = false
+[053] :035:SETTABLEKS     v0.PlatformStand = v1
+[054] :035:GETUPVAL       v1 = u_v2
+[056] :035:GETTABLEKS     v0 = v1.Running
+[057] :035:LOADK          v1 = 0.65
+[059] :035:SETTABLEKS     v0.Volume = v1
+[061] :035:GETIMPORT      v0 = workspace
+[062] :035:LOADK          v1 = 196.2
+[064] :035:SETTABLEKS     v0.Gravity = v1
+[066] :037:GETIMPORT      v0 = time
+[067] :037:CALL           v0 = v0()
+[068] :037:SETUPVAL       u_v7 = v0
+end
+end
+[069] :039:RETURN         return
+end
+[080] :029:CALL           v10:Connect(v12)
+[082] :042:GETTABLEKS     v10 = v5.InputBegan
+[083] :042:DUPCLOSURE     v12 = function(p1, p2)
+-- proto pool id: 3
+-- num upvalues: 0
+-- num inner protos: 0
+-- size instructions: 1
+-- size constants: 0
+-- lineinfo gap: 24
+-- max stack size: 2
+-- is typed: false
+[001] :044:RETURN         return
+end
+[086] :042:CALL           v10:Connect(v12)
+[088] :047:GETTABLEKS     v10 = v4.RenderStepped
+[089] :047:NEWCLOSURE     v12 = function()
+-- proto pool id: 4
+-- num upvalues: 7
+-- num inner protos: 0
+-- size instructions: 153
+-- size constants: 39
+-- lineinfo gap: 24
+-- max stack size: 12
+-- is typed: true
+[001] :048:GETUPVAL       v0 = u_v9
+[002] :048:LOADK          v2 = "Flying"
+[005] :048:CALL           v0 = v0:GetAttribute(v2)
+[007] :048:JUMPXEQKB      if v0 == true then -- goto #153
+[008] :048:GETUPVAL       v0 = u_v8
+[010] :048:JUMPXEQKB      if v0 == true then -- goto #153
+[012] :049:GETIMPORT      v0 = workspace
+[013] :049:LOADN          v1 = 1
+[015] :049:SETTABLEKS     v0.Gravity = v1
+[016] :049:GETUPVAL       v0 = u_v2
+[018] :049:GETTABLEKS     v1 = v0.AssemblyLinearVelocity
+[019] :049:DIVK           v1 = v1 / 1.1
+[021] :049:SETTABLEKS     v0.AssemblyLinearVelocity = v1
+[022] :049:GETUPVAL       v0 = u_v2
+[024] :049:GETTABLEKS     v1 = v0.AssemblyAngularVelocity
+[025] :049:DIVK           v1 = v1 / 1.1
+[027] :049:SETTABLEKS     v0.AssemblyAngularVelocity = v1
+[029] :050:GETIMPORT      v0 = require
+[030] :050:GETUPVAL       v2 = u_v9
+[031] :050:LOADK          v4 = "PlayerScripts"
+[034] :050:CALL           v2 = v2:WaitForChild(v4)
+[036] :050:GETTABLEKS     v1 = v2.PlayerModule
+[037] :050:LOADK          v3 = "ControlModule"
+[040] :050:CALL           ... = v1:WaitForChild(v3)
+[041] :050:CALL           v0 = v0(...)
+[044] :050:CALL           v0 = v0:GetMoveVector()
+[045] :051:LOADK          v1 = Vector3.new(0, 0, 0)
+[046] :051:GETUPVAL       v5 = u_v1
+[048] :051:GETTABLEKS     v4 = v5.WalkSpeed
+[049] :051:DIVK           v3 = v4 / 10
+[050] :051:MULK           v2 = v3 * 2.5
+[052] :052:GETTABLEKS     v3 = v0.X
+[053] :052:LOADK          v4 = 0.5
+[055] :052:JUMPIFNOTLT    if v4 < v3 then -- goto #62
+[056] :053:GETUPVAL       v5 = u_v6
+[058] :053:GETTABLEKS     v4 = v5.CFrame
+[060] :053:GETTABLEKS     v3 = v4.RightVector
+[061] :053:ADD            v1 = v1 + v3
+end
+[063] :055:GETTABLEKS     v3 = v0.X
+[064] :055:LOADK          v4 = -0.5
+[066] :055:JUMPIFNOTLT    if v3 < v4 then -- goto #73
+[067] :056:GETUPVAL       v5 = u_v6
+[069] :056:GETTABLEKS     v4 = v5.CFrame
+[071] :056:GETTABLEKS     v3 = v4.RightVector
+[072] :056:SUB            v1 = v1 - v3
+end
+[074] :058:GETTABLEKS     v3 = v0.Z
+[075] :058:LOADK          v4 = 0.5
+[077] :058:JUMPIFNOTLT    if v4 < v3 then -- goto #84
+[078] :059:GETUPVAL       v5 = u_v6
+[080] :059:GETTABLEKS     v4 = v5.CFrame
+[082] :059:GETTABLEKS     v3 = v4.LookVector
+[083] :059:SUB            v1 = v1 - v3
+end
+[085] :061:GETTABLEKS     v3 = v0.Z
+[086] :061:LOADK          v4 = -0.5
+[088] :061:JUMPIFNOTLT    if v3 < v4 then -- goto #95
+[089] :062:GETUPVAL       v5 = u_v6
+[091] :062:GETTABLEKS     v4 = v5.CFrame
+[093] :062:GETTABLEKS     v3 = v4.LookVector
+[094] :062:ADD            v1 = v1 + v3
+end
+[095] :064:GETUPVAL       v3 = u_v5
+[097] :064:GETIMPORT      v5 = Enum.KeyCode.E
+[100] :064:CALL           v3 = v3:IsKeyDown(v5)
+[101] :064:JUMPIFNOT      if v3 then -- goto #107
+[102] :065:GETUPVAL       v5 = u_v6
+[104] :065:GETTABLEKS     v4 = v5.CFrame
+[106] :065:GETTABLEKS     v3 = v4.UpVector
+end
+[107] :065:ADD            v1 = v1 + v3
+[108] :067:GETUPVAL       v3 = u_v5
+[110] :067:GETIMPORT      v5 = Enum.KeyCode.Q
+[113] :067:CALL           v3 = v3:IsKeyDown(v5)
+[114] :067:JUMPIFNOT      if v3 then -- goto #120
+[115] :068:GETUPVAL       v5 = u_v6
+[117] :068:GETTABLEKS     v4 = v5.CFrame
+[119] :068:GETTABLEKS     v3 = v4.UpVector
+end
+[120] :068:SUB            v1 = v1 - v3
+[121] :071:GETUPVAL       v3 = u_v2
+[123] :071:GETTABLEKS     v4 = v3.AssemblyLinearVelocity
+[124] :071:MUL            v5 = v1 * v2
+[125] :071:ADD            v4 = v4 + v5
+[127] :071:SETTABLEKS     v3.AssemblyLinearVelocity = v4
+[128] :073:GETUPVAL       v3 = u_v0
+[130] :073:GETIMPORT      v5 = CFrame.new
+[131] :073:GETUPVAL       v7 = u_v0
+[134] :073:CALL           v7 = v7:GetPivot()
+[136] :073:GETTABLEKS     v6 = v7.Position
+[137] :073:GETUPVAL       v9 = u_v0
+[140] :073:CALL           v9 = v9:GetPivot()
+[142] :073:GETTABLEKS     v8 = v9.Position
+[143] :073:GETUPVAL       v11 = u_v6
+[145] :073:GETTABLEKS     v10 = v11.CFrame
+[147] :073:GETTABLEKS     v9 = v10.LookVector
+[148] :073:ADD            v7 = v8 + v9
+[149] :073:CALL           ... = v5(v6, v7)
+[152] :073:CALL           v3:PivotTo()
+end
+end
+[153] :075:RETURN         return
+end
+[099] :047:CALL           v10:Connect(v12)
+[101] :075:RETURN         return
